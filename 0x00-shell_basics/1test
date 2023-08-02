@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo '#!/bin/bash
+ls
+' > 1-listit
+
+# Add, commit, and push changes to Git repository
+git add .
+git commit -m "1-listit updated"
+git push
