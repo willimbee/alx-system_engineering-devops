@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 shopt -s nullglob; for file in *.html; do if [ "$file" -nt "../$file" ]; then cp "$file" "../$file"; fi; done
+=======
+shopt -s nullglob; for file in *.html; do [ "$file" -nt "../$file" ] && cp "$file" "../$file"; done
+>>>>>>> 8aa6cc0867ad2fdff0b85e9dc5af87d67d1c215f
