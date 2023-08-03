@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -um *.html ../ 
+shopt -s nullglob; for file in *.html; do if [ "$file" -nt "../$file" ]; then cp "$file" "../$file"; fi; done
