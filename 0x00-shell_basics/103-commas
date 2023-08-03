@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1p | grep -E '/$|\.' | sort -n -k1.2 | tr '\n' ','
+ls -Ap | awk '{printf("%s, ", $0)} END {print ""}' | sed 's/ \/ /, /g'
