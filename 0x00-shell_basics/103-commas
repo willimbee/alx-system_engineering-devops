@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap | paste -sd ', ' - | sed 's/ /, /g'
+ls -A1p | grep -E '/$|\.' | sort -n -k1.2 | tr '\n' ','
